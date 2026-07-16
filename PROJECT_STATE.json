@@ -1,0 +1,56 @@
+{
+  "updatedAt": "2026-07-16T04:11:37.032Z",
+  "framework": "Next.js",
+  "dbModels": [],
+  "apiRoutes": [],
+  "pages": [
+    "app/page.tsx"
+  ],
+  "components": [
+    "app/layout.tsx",
+    "components/face-detection-page.tsx",
+    "components/layout/app-shell.tsx",
+    "components/layout/container.tsx",
+    "components/layout/page-header.tsx",
+    "components/states/empty-state.tsx",
+    "components/states/error-state.tsx",
+    "components/states/loading.tsx",
+    "components/ui/badge.tsx",
+    "components/ui/button.tsx",
+    "components/ui/card.tsx",
+    "components/ui/command-palette.tsx",
+    "components/ui/dialog.tsx",
+    "components/ui/input.tsx",
+    "components/ui/skeleton.tsx",
+    "components/ui/spinner.tsx",
+    "components/ui/stat-card.tsx",
+    "components/ui/table.tsx",
+    "components/ui/tabs.tsx",
+    "components/ui/toast.tsx",
+    "features/auth/auth-form.tsx"
+  ],
+  "dependencies": [
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "@vladmandic/face-api",
+    "autoprefixer",
+    "clsx",
+    "framer-motion",
+    "lucide-react",
+    "next",
+    "postcss",
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwindcss",
+    "typescript"
+  ],
+  "fileCount": 35,
+  "runtime": {
+    "status": "ONLINE",
+    "previewUrl": "https://3000-ivfyxxbcy05hguy6k3jr5.e2b.app",
+    "sandboxId": "ivfyxxbcy05hguy6k3jr5",
+    "lastUsedAt": "2026-07-16T04:11:31.146Z"
+  }
+}

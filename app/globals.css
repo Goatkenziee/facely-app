@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Facely — electric cobalt palette ─────────────────────────── */
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 30% 92%;
+    --secondary-foreground: 217 60% 25%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 217 91% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 72% 40%;
+    --warning: 38 92% 50%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 217 91% 55%;
+    --radius: 0.625rem;
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; font-feature-settings: "cv02", "cv03", "cv04", "cv11"; }
+}
+
+/* ── Animations ───────────────────────────────────────────────── */
+@keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4) } 70% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0) } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0) } }
+
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.animate-fade-up { animation: fade-up 0.4s ease-out; }
+.animate-pulse-ring { animation: pulse-ring 2s infinite; }
+
+/* ── Face detection overlay ───────────────────────────────────── */
+.face-box {
+  position: absolute;
+  border: 2px solid rgba(59, 130, 246, 0.8);
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3), 0 0 16px rgba(59, 130, 246, 0.15);
+  pointer-events: none;
+  transition: all 0.15s ease;
+}
+.face-box .label {
+  position: absolute;
+  top: -24px;
+  left: -2px;
+  background: rgb(59, 130, 246);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px 4px 0 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
